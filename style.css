@@ -66,12 +66,15 @@ nav {
     width: calc(100% - 4em);
     height: calc(100vh - 4em);
     display: none;
+    transform: scaleX(0);
+    transform-origin: left;
 }
 
 .close-btn {
     width: 18px;
     float: right;
     cursor: pointer;
+    opacity: 0;
 }
 .order{
  
@@ -97,7 +100,39 @@ nav {
     margin-top: 20px;
     margin-left: 5px;
 }
+.order li{
+    opacity: 0;
+}
 
 .show-menu{
     display: block;
+    animation: slide-menu 1s ease-in forwards;
+}
+
+.show-menu .close-btn{
+    animation: show-x 1s 1s forwards;
+}
+
+@keyframes slide-menu{
+    from{
+        transform: scaleX(0);
+
+    }
+
+    to{
+        transform: scaleX(1);
+
+    }
+}
+
+@keyframes show-x{
+    from{
+       opacity: 0;
+
+    }
+
+    to{
+       opacity: 1;
+
+    }
 }
