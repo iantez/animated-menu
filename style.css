@@ -65,6 +65,7 @@ nav {
     padding: 2em;
     width: calc(100% - 4em);
     height: calc(100vh - 4em);
+    display: none;
 }
 
 .close-btn {
@@ -73,14 +74,13 @@ nav {
     cursor: pointer;
 }
 .order{
-    list-style-type: none;
+ 
     margin: 10% auto 0 auto;
-    padding: 0;
+    margin-left: 30px;
+    padding:0;
     display: inline-flex;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    /* transform: translate(-50%, -50%); */
 
 }
 
@@ -94,5 +94,10 @@ nav {
     color: #efe;
     font-size: 0.75em;
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.show-menu{
+    display: block;
 }
