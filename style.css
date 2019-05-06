@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=segoe UI:700:400');
 
-body, html {
+body,
+html {
     font-family: 'Segoe UI';
     margin: 0;
     padding: 0;
@@ -10,11 +11,9 @@ body, html {
 
 }
 
-
-
 a {
     text-decoration: none;
-    /* color: #efe; */
+
 }
 
 header {
@@ -23,12 +22,13 @@ header {
 }
 
 header .logo {
-    color:#000;
+    color: #000;
     font-size: 24px;
     /* font-weight: bold; */
 }
+
 header .menu-btn {
-    float:right;
+    float: right;
     cursor: pointer;
     width: 25px;
 }
@@ -38,14 +38,15 @@ section {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    
+
 }
+
 section .mine {
     font-size: 2.5em;
     color: #000;
-    text-decoration: overline ;
+    text-decoration: overline;
 
-   
+
 }
 
 section .tag {
@@ -55,7 +56,7 @@ section .tag {
     text-align: center;
     align-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
+
 }
 
 /* navigation bar styling */
@@ -76,63 +77,100 @@ nav {
     cursor: pointer;
     opacity: 0;
 }
-.order{
- 
+
+.order {
+
     margin: 10% auto 0 auto;
     margin-left: 30px;
-    padding:0;
+    padding: 0;
     display: inline-flex;
     position: relative;
-    /* transform: translate(-50%, -50%); */
+    list-style-type: none;
+    align-content: center;
+    text-align: center;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
 }
 
 .order a {
     color: #fcc427;
     font-size: 1.8em;
-    font-weight: bold;    
+    font-weight: bold;
+    margin-right: 20px;
 }
 
 .order span {
     color: #efe;
     font-size: 0.75em;
     display: block;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 5px;
 }
-.order li{
+
+.order li {
     opacity: 0;
 }
 
-.show-menu{
+.show-menu {
     display: block;
     animation: slide-menu 1s ease-in forwards;
 }
 
-.show-menu .close-btn{
+.show-menu close-btn {
     animation: show-x 1s 1s forwards;
 }
 
-@keyframes slide-menu{
-    from{
+.show-menu li:nth-of-type(1) {
+    animation: menu-item-anim .6s forwards 1s ease-in-out;
+}
+
+.show-menu li:nth-of-type(2) {
+    animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+}
+
+.show-menu li:nth-of-type(3) {
+    animation: menu-item-anim .6s forwards 1.4s ease-in-out;
+}
+
+.show-menu li:nth-of-type(4) {
+    animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+}
+
+
+@keyframes slide-menu {
+    from {
         transform: scaleX(0);
 
     }
 
-    to{
+    to {
         transform: scaleX(1);
 
     }
 }
 
-@keyframes show-x{
-    from{
-       opacity: 0;
+@keyframes show-x {
+    from {
+        opacity: 0;
 
     }
 
-    to{
-       opacity: 1;
+    to {
+        opacity: 1;
 
+    }
+}
+
+@keyframes menu-item-anim {
+    from {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
